@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "array": "cpp",
+        "atomic": "cpp",
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "string_view": "cpp",
+        "numeric": "cpp"
+    }
+}
