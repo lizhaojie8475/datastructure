@@ -144,6 +144,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named threadsafeMap
+
+# Build rule for target.
+threadsafeMap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 threadsafeMap
+.PHONY : threadsafeMap
+
+# fast build rule for target.
+threadsafeMap/fast:
+	$(MAKE) -f CMakeFiles/threadsafeMap.dir/build.make CMakeFiles/threadsafeMap.dir/build
+.PHONY : threadsafeMap/fast
+
+#=============================================================================
 # Target rules for targets named ContinuousCoverage
 
 # Build rule for target.
@@ -233,19 +246,6 @@ ExperimentalSubmit: cmake_check_build_system
 ExperimentalSubmit/fast:
 	$(MAKE) -f CMakeFiles/ExperimentalSubmit.dir/build.make CMakeFiles/ExperimentalSubmit.dir/build
 .PHONY : ExperimentalSubmit/fast
-
-#=============================================================================
-# Target rules for targets named concurrentAcc
-
-# Build rule for target.
-concurrentAcc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 concurrentAcc
-.PHONY : concurrentAcc
-
-# fast build rule for target.
-concurrentAcc/fast:
-	$(MAKE) -f CMakeFiles/concurrentAcc.dir/build.make CMakeFiles/concurrentAcc.dir/build
-.PHONY : concurrentAcc/fast
 
 #=============================================================================
 # Target rules for targets named ContinuousUpdate
@@ -520,32 +520,32 @@ Experimental/fast:
 	$(MAKE) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/build
 .PHONY : Experimental/fast
 
-concurrentAcumulate.o: concurrentAcumulate.cpp.o
+threadsafeMap.o: threadsafeMap.cpp.o
 
-.PHONY : concurrentAcumulate.o
+.PHONY : threadsafeMap.o
 
 # target to build an object file
-concurrentAcumulate.cpp.o:
-	$(MAKE) -f CMakeFiles/concurrentAcc.dir/build.make CMakeFiles/concurrentAcc.dir/concurrentAcumulate.cpp.o
-.PHONY : concurrentAcumulate.cpp.o
+threadsafeMap.cpp.o:
+	$(MAKE) -f CMakeFiles/threadsafeMap.dir/build.make CMakeFiles/threadsafeMap.dir/threadsafeMap.cpp.o
+.PHONY : threadsafeMap.cpp.o
 
-concurrentAcumulate.i: concurrentAcumulate.cpp.i
+threadsafeMap.i: threadsafeMap.cpp.i
 
-.PHONY : concurrentAcumulate.i
+.PHONY : threadsafeMap.i
 
 # target to preprocess a source file
-concurrentAcumulate.cpp.i:
-	$(MAKE) -f CMakeFiles/concurrentAcc.dir/build.make CMakeFiles/concurrentAcc.dir/concurrentAcumulate.cpp.i
-.PHONY : concurrentAcumulate.cpp.i
+threadsafeMap.cpp.i:
+	$(MAKE) -f CMakeFiles/threadsafeMap.dir/build.make CMakeFiles/threadsafeMap.dir/threadsafeMap.cpp.i
+.PHONY : threadsafeMap.cpp.i
 
-concurrentAcumulate.s: concurrentAcumulate.cpp.s
+threadsafeMap.s: threadsafeMap.cpp.s
 
-.PHONY : concurrentAcumulate.s
+.PHONY : threadsafeMap.s
 
 # target to generate assembly for a file
-concurrentAcumulate.cpp.s:
-	$(MAKE) -f CMakeFiles/concurrentAcc.dir/build.make CMakeFiles/concurrentAcc.dir/concurrentAcumulate.cpp.s
-.PHONY : concurrentAcumulate.cpp.s
+threadsafeMap.cpp.s:
+	$(MAKE) -f CMakeFiles/threadsafeMap.dir/build.make CMakeFiles/threadsafeMap.dir/threadsafeMap.cpp.s
+.PHONY : threadsafeMap.cpp.s
 
 # Help Target
 help:
@@ -554,6 +554,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... threadsafeMap"
 	@echo "... package_source"
 	@echo "... ContinuousCoverage"
 	@echo "... ContinuousTest"
@@ -562,7 +563,6 @@ help:
 	@echo "... ExperimentalBuild"
 	@echo "... ExperimentalCoverage"
 	@echo "... ExperimentalSubmit"
-	@echo "... concurrentAcc"
 	@echo "... ContinuousUpdate"
 	@echo "... ExperimentalUpdate"
 	@echo "... ExperimentalStart"
@@ -587,9 +587,9 @@ help:
 	@echo "... ExperimentalMemCheck"
 	@echo "... Continuous"
 	@echo "... Experimental"
-	@echo "... concurrentAcumulate.o"
-	@echo "... concurrentAcumulate.i"
-	@echo "... concurrentAcumulate.s"
+	@echo "... threadsafeMap.o"
+	@echo "... threadsafeMap.i"
+	@echo "... threadsafeMap.s"
 .PHONY : help
 
 
